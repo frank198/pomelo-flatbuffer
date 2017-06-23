@@ -1,0 +1,9 @@
+{
+
+  "gate.gateHandler.getConnector":
+  {
+    "required string userName":1,
+    "required string passWord":2
+  }
+
+}

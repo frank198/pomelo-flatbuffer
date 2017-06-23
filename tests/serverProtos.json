@@ -1,0 +1,11 @@
+{
+  "ItemDistances":
+  {
+    "repeated ItemDistance itemDistances":1
+  },
+  "message ItemDistance":
+  {
+    "required string linkId":1,
+    "required string distance":2
+  }
+}

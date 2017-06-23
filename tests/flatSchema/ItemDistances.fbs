@@ -1,0 +1,14 @@
+
+table ItemDistances {
+      itemDataArr:[ItemDistance];
+}
+
+
+table ItemDistance {
+      linkId:string;
+      distance:string;
+}
+
+
+
+root_type ItemDistances;

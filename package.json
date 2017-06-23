@@ -1,0 +1,7 @@
+{
+  "name": "pomelo-flatbuffer",
+  "version": "0.0.1",
+  "dependencies": {
+    "pomelo-logger": "^0.1.7"
+  }
+}
