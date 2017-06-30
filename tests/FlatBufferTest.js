@@ -1,27 +1,10 @@
-const FlatBuffer = require('../lib/components/flatbuffer');
+const FlatBuffer = require('../lib/index');
 const exampleData = require('./exampleData');
+const fs = require('fs');
+const path = require('path');
 
-const app = {
-	getBase : function()
-	{
-		return __dirname;
-	},
-	get: function()
-	{
-		return 'development';
-	}
-};
-
-const flatBufferInstance = FlatBuffer(app, {
-	serverProtos : '/serverProtos.json',
-	clientProtos : '/clientProtos.json',
-	serverFBPath : '/serverBFBS/',
-	clientFBPath : '/clientBFBS/'
-});
-
-flatBufferInstance.start(() =>
-{
-	const data = flatBufferInstance.encode('ItemDistances', exampleData.ItemDistances);
-	console.log(data);
-
-});
+const data = fs.readFileSync(path.join(__dirname, '/serverBFBS/MessageBoxInfo.bfbs'));
+const flatBuild = FlatBuffer.compileSchema(data);
+const bytes = flatBuild.generate(exampleData.MessageBoxInfo);
+console.log(bytes.toString());
+const jsonData = flatBuild.parse(bytes);
