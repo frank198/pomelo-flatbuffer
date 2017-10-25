@@ -1,3 +1,8 @@
+1.1.0 / 2017-10-25
+=================
+  * update flatbuffer
+  * remove pomelo-logger
+
 1.0.1 / 2017-6-30
 =================
   * nodejs 升级到 Node 8
