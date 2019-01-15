@@ -1,6 +1,81 @@
 {
   "name": "pomelo-flatbuffer",
-  "version": "1.2.0",
+  "version": "2.0.0",
+  "description": "flatbuffer for pomelo",
+  "keywords": [
+    "pomelo",
+    "flatbuffer",
+    "pomelo flatbuffer",
+    "protobuff"
+  ],
+  "license": "MIT",
   "dependencies": {
+  },
+  "devDependencies": {
+    "eslint": "5.3.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "node ./test/PomeloFlatBuffer.js"
+  },
+  "main": "./index.js",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/frank198/pomelo-flatbuffer.git"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2015
+    },
+    "env": {
+      "node": true,
+      "mocha": true,
+      "es6": true
+    },
+    "rules": {
+      "comma-style": "error",
+      "consistent-this": [
+        "error",
+        "_this"
+      ],
+      "indent": [
+        "error",
+        2,
+        {
+          "SwitchCase": 1,
+          "VariableDeclarator": 2
+        }
+      ],
+      "keyword-spacing": "error",
+      "no-buffer-constructor": "warn",
+      "no-console": "off",
+      "no-multi-spaces": "error",
+      "func-call-spacing": "error",
+      "no-trailing-spaces": "error",
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": "error",
+      "space-before-blocks": "error",
+      "space-before-function-paren": [
+        "error",
+        "never"
+      ],
+      "space-infix-ops": "error",
+      "space-unary-ops": "error",
+      "no-var": "warn",
+      "prefer-const": "warn",
+      "strict": [
+        "error",
+        "global"
+      ]
+    }
   }
 }
